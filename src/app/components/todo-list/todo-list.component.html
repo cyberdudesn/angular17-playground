@@ -1,0 +1,6 @@
+<input (input)="updateFilter($any($event.target).value)" placeholder="Filter">
+<ul>
+  @for(todoItem of filtered(); track todoItem.text) {
+    <li>{{ todoItem.text }}</li>
+  }
+</ul>

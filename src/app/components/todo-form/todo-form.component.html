@@ -1,0 +1,4 @@
+<form (submit)="addTodo()">
+  <input [(ngModel)]="todoText" placeholder="Insert Todo" [ngModelOptions]="{standalone: true}" />
+  <button type="submit">Add</button>
+</form>
