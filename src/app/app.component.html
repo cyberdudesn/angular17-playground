@@ -1,4 +1,4 @@
-<div class="todo-wrapper">
-  <app-todo-list [todoList]="todoList()"></app-todo-list>
-  <app-todo-form (todoAdded)="onTodoAdded($event)"></app-todo-form>
+<app-side-bar [topics]="topics"></app-side-bar>
+<div class="topic-container">
+  <router-outlet></router-outlet>
 </div>

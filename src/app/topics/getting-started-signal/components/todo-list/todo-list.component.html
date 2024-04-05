@@ -2,5 +2,7 @@
 <ul>
   @for(todoItem of filtered(); track todoItem.text) {
     <li>{{ todoItem.text }}</li>
+  } @empty {
+    <li>No todo items</li>
   }
 </ul>

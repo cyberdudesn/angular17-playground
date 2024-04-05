@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './todo-form.component.html',
-  styleUrl: './todo-form.component.scss'
+  styleUrl: './todo-form.component.scss',
 })
 export class TodoFormComponent {
   @Output() todoAdded: EventEmitter<TodoItem> = new EventEmitter();
@@ -19,8 +19,8 @@ export class TodoFormComponent {
   addTodo() {
     const todo: TodoItem = {
       text: this.todoText(),
-      createdDate: dayjs().format('YYYY-MM-DD HH:mm:ss')
-    }
+      createdDate: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+    };
     this.todoAdded.emit(todo);
     this.todoText.set('');
   }

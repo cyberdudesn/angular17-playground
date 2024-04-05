@@ -13,7 +13,7 @@ export class TodoListComponent {
   filterText = signal<string>('');
 
   filtered = computed(() =>
-    this.todoList()?.filter(({ text }) => text.startsWith(this.filterText()));
+    this.todoList()?.filter(({ text }) => text.startsWith(this.filterText()))
   );
 
   updateFilter(filterText: string) {

@@ -1,0 +1,25 @@
+:host {
+  width: 260px;
+  background-color: #232323;
+  height: 100vh;
+  padding: 15px;
+  color: #eeeeee;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+ul {
+  padding: 0 0 0 20px;
+
+  > li {
+    padding: 0 0 15px;
+  }
+
+  a {
+    color: #eeeeee;
+  }
+}

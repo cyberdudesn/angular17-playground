@@ -1,0 +1,14 @@
+<h1>Angular Playground</h1>
+<nav>
+  <ul>
+    @for(topic of topics; track topic.label) {
+    <li>
+      <a
+        [routerLink]="['/' + topic.path]"
+        routerLinkActive="router-link-active"
+        >{{ topic.label }}</a
+      >
+    </li>
+    }
+  </ul>
+</nav>
