@@ -1,0 +1,8 @@
+section > .content {
+  display: flex;
+  gap: 10px;
+}
+
+.banner-container > .content {
+  flex-direction: column;
+}

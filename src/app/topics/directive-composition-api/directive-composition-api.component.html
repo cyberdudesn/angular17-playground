@@ -1,0 +1,46 @@
+<h2>Directive Composition API</h2>
+
+<section>
+  <h3>Button</h3>
+  <div class="content">
+    <button df-button (click)="alert('Solid Button!')">Solid Button</button>
+    <button
+      df-button
+      color="secondary"
+      type="stroked"
+      (click)="alert('Stroked Button!')"
+    >
+      Stroked Button
+    </button>
+    <button
+      df-button
+      [disabled]="true"
+      (click)="alert('This should not show!')"
+    >
+      Disabled Button
+    </button>
+  </div>
+</section>
+
+<section>
+  <h3>Chip</h3>
+  <div class="content">
+    <app-chip (remove)="alert('Solid chip removed!')">Solid Chip</app-chip>
+    <app-chip
+      (remove)="alert('Stroked chip removed!')"
+      color="secondary"
+      type="stroked"
+      >Stroked Chip</app-chip
+    >
+  </div>
+</section>
+
+<section class="banner-container">
+  <h3>Banner</h3>
+  <div class="content">
+    <app-banner>This is a notification text for Solid Banner</app-banner>
+    <app-banner color="secondary" type="stroked"
+      >This is a notification text for Stroked Banner</app-banner
+    >
+  </div>
+</section>

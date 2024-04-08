@@ -23,5 +23,9 @@ export class AppComponent {
       label: 'Deferrable Views',
       path: 'deferrable-views',
     },
+    {
+      label: 'Directive composition API',
+      path: 'directive-composition-api',
+    },
   ];
 }
