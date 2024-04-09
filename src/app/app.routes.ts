@@ -5,11 +5,10 @@ import { DirectiveCompositionApiComponent } from './topics/directive-composition
 export const routes: Routes = [
   {
     path: 'getting-started-signal',
-    // loadChildren: () =>
-    //   import(
-    //     './topics/getting-started-signal/getting-started-signal.module'
-    //   ).then((m) => m.GettingStartedSignalModule),
-    component: GettingStartedSignalComponent,
+    loadChildren: () =>
+      import(
+        './topics/getting-started-signal/getting-started-signal.module'
+      ).then((m) => m.GettingStartedSignalModule),
   },
   {
     path: 'deferrable-views',
@@ -20,7 +19,10 @@ export const routes: Routes = [
   },
   {
     path: 'directive-composition-api',
-    component: DirectiveCompositionApiComponent,
+    loadChildren: () =>
+      import(
+        './topics/directive-composition-api/directive-composition-api.module'
+      ).then((m) => m.DirectiveCompositionApiModule),
   },
   {
     path: '',
