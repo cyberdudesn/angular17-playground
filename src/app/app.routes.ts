@@ -25,6 +25,13 @@ export const routes: Routes = [
       ).then((m) => m.DirectiveCompositionApiModule),
   },
   {
+    path: 'dependency-injection-in-depth',
+    loadChildren: () =>
+      import(
+        './topics/dependency-injection-in-depth/dependency-injection-in-depth.module'
+      ).then((m) => m.DependencyInjectionInDepthModule),
+  },
+  {
     path: '',
     redirectTo: 'getting-started-signal',
     pathMatch: 'full',

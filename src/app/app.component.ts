@@ -20,12 +20,16 @@ export class AppComponent {
       path: 'getting-started-signal',
     },
     {
-      label: 'Deferrable Views',
+      label: 'Deferrable views',
       path: 'deferrable-views',
     },
     {
       label: 'Directive composition API',
       path: 'directive-composition-api',
+    },
+    {
+      label: 'Dependency injection in-depth',
+      path: 'dependency-injection-in-depth',
     },
   ];
 }
