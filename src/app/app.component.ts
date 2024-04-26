@@ -31,5 +31,9 @@ export class AppComponent {
       label: 'Dependency injection in-depth',
       path: 'dependency-injection-in-depth',
     },
+    {
+      label: 'Trying out NgTemplateOutlet',
+      path: 'ng-template-outlet',
+    },
   ];
 }

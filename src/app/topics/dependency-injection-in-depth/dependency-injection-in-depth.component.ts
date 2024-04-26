@@ -5,7 +5,7 @@ import { LegacyLogger } from './legacy-logger';
 import { DEP_INJ_TOPIC_CONFIG, DepInjTopicConfig } from './config.token';
 import { HttpClient } from '@angular/common/http';
 
-function loggerFactory(
+export function loggerFactory(
   injector: Injector
 ): ExperimentalLoggerService | LoggerService {
   return injector.get(DEP_INJ_TOPIC_CONFIG).enableExperimental
@@ -41,9 +41,18 @@ function loggerFactory(
     // ** would be used, otherwise LoggerService would be used
     {
       provide: LoggerService,
-      useFactory: loggerFactory,
-      deps: [Injector],
+      useFactory: (config: DepInjTopicConfig, http: HttpClient) => {
+        return config.enableExperimental
+          ? new ExperimentalLoggerService(http)
+          : new LoggerService();
+      },
+      deps: [DEP_INJ_TOPIC_CONFIG, HttpClient],
     },
+    // {
+    //   provide: LoggerService,
+    //   useFactory: loggerFactory,
+    //   deps: [Injector],
+    // },
   ],
 })
 export class DependencyInjectionInDepthComponent {

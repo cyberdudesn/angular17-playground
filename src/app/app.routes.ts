@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { GettingStartedSignalComponent } from './topics/getting-started-signal/getting-started-signal.component';
-import { DirectiveCompositionApiComponent } from './topics/directive-composition-api/directive-composition-api.component';
 
 export const routes: Routes = [
   {
@@ -25,11 +23,11 @@ export const routes: Routes = [
       ).then((m) => m.DirectiveCompositionApiModule),
   },
   {
-    path: 'dependency-injection-in-depth',
+    path: 'ng-template-outlet',
     loadChildren: () =>
       import(
-        './topics/dependency-injection-in-depth/dependency-injection-in-depth.module'
-      ).then((m) => m.DependencyInjectionInDepthModule),
+        './topics/trying-out-ng-template-outlet/trying-out-ng-template-outlet.module'
+      ).then((m) => m.TryingOutNgTemplateOutletModule),
   },
   {
     path: '',
