@@ -43,3 +43,12 @@ body {
 .df-stroked.df-secondary {
   color: var(--color-secondary);
 }
+
+.form-field {
+  padding-bottom: 10px;
+
+  > label {
+    display: inline-block;
+    min-width: 140px;
+  }
+}

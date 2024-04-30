@@ -20,10 +20,6 @@ export class AppComponent {
       path: 'getting-started-signal',
     },
     {
-      label: 'Deferrable views',
-      path: 'deferrable-views',
-    },
-    {
       label: 'Directive composition API',
       path: 'directive-composition-api',
     },
@@ -34,6 +30,10 @@ export class AppComponent {
     {
       label: 'Trying out NgTemplateOutlet',
       path: 'ng-template-outlet',
+    },
+    {
+      label: 'Reusable reactive form',
+      path: 'reusable-reactive-form',
     },
   ];
 }

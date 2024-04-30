@@ -1,4 +1,4 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { WeatherWidgetComponent } from '../weather-widget/weather-widget.component';
 import { CommonModule } from '@angular/common';
 
