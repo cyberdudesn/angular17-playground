@@ -1,4 +1,11 @@
-import { Component, Input, OnInit, SkipSelf, inject } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+  SkipSelf,
+  inject,
+} from '@angular/core';
 import {
   ControlContainer,
   FormControl,
@@ -30,7 +37,7 @@ import {
     </fieldset>
   `,
 })
-export class AddressGroupComponent implements OnInit {
+export class AddressGroupComponent implements OnInit, OnDestroy {
   @Input({ required: true }) controlKey = '';
   @Input() label = '';
 
@@ -48,5 +55,9 @@ export class AddressGroupComponent implements OnInit {
         street: new FormControl(''),
       })
     );
+  }
+
+  ngOnDestroy(): void {
+    this.parentFromGroup.removeControl(this.controlKey);
   }
 }
